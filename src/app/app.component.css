@@ -1,0 +1,59 @@
+/*for Login button (start)*/
+.btn-success1
+{
+	background-color: #002db3; 
+    border: 2px solid #ffffff;
+    color: white;
+    border-radius:10px;
+}
+.btn-success1:hover
+{
+   background-image: linear-gradient(to right,#24248f, #3333cc , #c2c2f0);
+   color: white;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*for Login button(end)*/
+
+/*for modal (start)*/
+#form
+{
+	width:100%;
+}
+#error
+{
+	color:red
+}
+input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].btn-block 
+{
+    width:50% !important;
+    margin: auto !important;
+}
+/*for modal (end)*/
+
+a{
+	color:#ffffff;
+}
+
+/*for footer section (start)*/
+#footerText
+{
+	color:#b3d9ff;
+	font-size:18px;
+}
+#footerText2
+{
+  color:#ffebcc;
+  font-size:22px;
+}
+/*for footer section (end)*/
+
+.navbar-toggler 
+{    
+     background-color: #002db3; 
+     border: 2px solid #ffffff; 
+}
+.dropdown-menu.show 
+{
+    background-image: linear-gradient(to right,#7952b3, #3333cc , #c2c2f0);
+    border: 2px solid #ffffff; 
+ }

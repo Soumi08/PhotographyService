@@ -1,0 +1,38 @@
+
+<div class="regBack">
+  <div class="caption">
+    <span class="border"> Sign Up</span><br>
+  </div>
+</div>
+
+<div class="container">
+<form id="form" [formGroup]="regForm" (ngSubmit)="regData()">
+<div class="form-group">
+<br>
+<h1 class="h3 mb-3 font-weight-normal">Please Fill up</h1>
+  <label for="fname" class="sr-only"> First Name  </label>
+      <input type="text" class="form-control" formControlName="firstname"  placeholder="Enter Your First Name">
+      <div *ngIf="regForm.get('firstname').hasError('required') && regForm.get('firstname').touched" id="error">* First name is Required</div><br>
+
+  <label for="lname" class="sr-only"> Last Name  </label>
+     <input type="text" class="form-control" formControlName="lastname"  placeholder="Enter Your Last Name">
+     <div *ngIf="regForm.get('lastname').hasError('required') && regForm.get('lastname').touched" id="error">* Last name is Required</div><br>
+      
+  <label for="email" class="sr-only"> Email  </label>
+      <input type="email" class="form-control" formControlName="email"  placeholder="Enter Email">
+      <div *ngIf="regForm.get('email').hasError('required') && regForm.get('email').touched" id="error">* Email is required</div>
+      <div *ngIf="regForm.get('email').hasError('pattern')" id="error">* Error pattern </div><br>
+         
+  <label for="password" class="sr-only"> Password  </label>
+      <input type="password" class="form-control" formControlName="password"  placeholder="Enter Password">
+      <div *ngIf="regForm.get('password').hasError('required') && regForm.get('password').touched" id="error">* Password is required </div>
+      <div *ngIf="regForm.get('password').hasError('pattern')" id="error">* Error pattern [Atleast one capital letter, one small letter, one special character and one number, min length 4] </div>
+      <br>
+  
+  <label for="submit"></label>
+      <input type="submit" value="sign up" id="submit" class="btn btn-lg btn-primary btn-block">
+</div>
+</form>
+</div>
+
+    

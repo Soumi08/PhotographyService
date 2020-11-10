@@ -1,0 +1,152 @@
+<!-- Code for navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-dark  fixed-top" style="background-image: linear-gradient(to right,#7952b3, #3333cc , #c2c2f0);" >
+  <a class="navbar-brand" href="#"><h2>ClickToClick</h2></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+          <!-- <li class="nav-item active">
+            <a class="nav-link" routerLink="home"> Home <span class="sr-only">(current)</span></a>
+          </li> -->
+          <li class="nav-item">
+              <a class="nav-link" routerLink="about"> What We Do </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catagories</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" routerLink="architectural">Architectural</a>
+                <a class="dropdown-item" routerLink="baby">Baby</a>
+                <a class="dropdown-item" routerLink="event">Event</a>
+                <a class="dropdown-item" routerLink="food">Food</a>
+                <a class="dropdown-item" routerLink="landscape">Landscape</a>
+                <a class="dropdown-item" routerLink="portrait">Portrait</a>
+                <a class="dropdown-item" routerLink="product">Product</a>
+                <a class="dropdown-item" routerLink="sports">Sports</a>
+                <a class="dropdown-item" routerLink="street">Street</a>
+                <a class="dropdown-item" routerLink="wedding">Wedding</a>
+                <a class="dropdown-item" routerLink="wildlife">Wildlife</a>
+                <!-- <a class="dropdown-item" routerLink="multiple">multiple</a> -->
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="others">Others</a>
+            </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="contact"> Contact Us </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="home#testimonialPart">Testimonials</a>
+          </li>
+      </ul>
+      <!-- login with modal -->
+      <ul class="nav navbar-nav navbar-right">
+          <button type='button' class="btn btn-success1 mr-auto" data-toggle="modal" data-target="#popUpWindow" style="float: right;"> Login </button>
+           <!--end of login with modal-->          
+      </ul> 
+  </div>
+</nav>
+<!-- end of code of navigation bar-->
+
+<!--Code for modal-->
+<div class="modal " id="popUpWindow">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- header -->
+      <div class="modal-header">
+        <h3 class="modal-title">Sign in</h3>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- body -->
+      <div class="modal-header">
+        <form role="form" id="form" [formGroup]="loginForm" (ngSubmit)="loginData()" >
+        <div class="form-group">
+
+          <label for="inputEmail" class="sr-only">Email address</label>
+          <input type="email" class="form-control" formControlName="email"  placeholder="Enter Email" autofocus>
+          <div *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').touched" id="error">* Email is required</div><br>
+     
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" class="form-control" formControlName="password"  placeholder="Enter Password">
+          <div *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched" id="error">* Password is required.</div>
+          <br>
+
+          <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+                            
+            <label for="submit"></label>
+                <input type="submit" value="Sign in" id="submit" class="btn btn-lg btn-primary btn-block" [disabled]="loginForm.invalid">
+          </div><br>
+          <div>
+            <h5 style="text-align: center;">Do not have an account ?</h5>
+                <input type="button" value="Register"  class="btn btn-lg btn-primary btn-block" routerLink="registration" data-dismiss="modal">
+          </div>
+        </div>
+        </form>
+      </div>
+      <!-- footer -->
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End of modal-->
+
+<router-outlet></router-outlet>
+
+<!--Footer Of page-->
+<br><br><br>
+<footer class="section footer-classic context-dark bg-image" style="background-image: linear-gradient(to right,#7952b3, #3333cc , #c2c2f0);">
+<br>
+<div class="container">
+  <div class="row row-30">
+    <div class="col-md-4 col-xl-5">
+      <div class="pr-xl-4">
+        <p id="footerText">We are an award-winning creative agency, dedicated to the best result in web design, promotion, business consulting, and marketing.</p>
+        <!-- Rights-->
+        <p class="rights">
+          <span id="footerText">©  </span>
+          <span class="copyright-year" id="footerText">2020</span>
+          <span> </span><span id="footerText">Waves</span>
+          <span id="footerText">. </span>
+          <span id="footerText">All Rights Reserved.</span>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h5 id="footerText">Contacts</h5>
+      <dl class="contact-list">
+          <dt id="footerText">Address:</dt>
+          <dd id="footerText">1234/1 Abc Road, Kolkata:700001,West Bengal</dd>
+      </dl>
+      <dl class="contact-list">
+          <dt id="footerText">email:</dt>
+          <dd><a href="mailto:#">clicktoclick@abc.com</a></dd>
+      </dl>
+      <dl class="contact-list">
+          <dt id="footerText">phones:</dt>
+          <dd><a href="tel:#">(+91) 98765 43210</a> <span id="footerText"> or </span> <a href="tel:#"> (+91) 98765 01234</a>
+          </dd>
+      </dl>
+    </div>
+    <div class="col-md-4 col-xl-3">
+      <h5 id="footerText">Links</h5>
+        <ul class="nav-list">
+          <li><a routerLink="about">About</a></li>
+          <li><a routerLink="contact">Contacts</a></li>
+          <li><a href="home#testimonialPart">Testimonials</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+<div class="row no-gutters social-container">
+    <div class="col"><a class="social-inner" href="https://www.facebook.com"><span class="icon mdi mdi-facebook"></span><span id="footerText2">Facebook</span></a></div>
+    <div class="col"><a class="social-inner" href="https://www.instagram.com"><span class="icon mdi mdi-instagram"></span><span id="footerText2">instagram</span></a></div>
+    <div class="col"><a class="social-inner" href="https://www.twitter.com"><span class="icon mdi mdi-twitter"></span><span id="footerText2">twitter</span></a></div>
+    <div class="col"><a class="social-inner" href="https:www.youtube.com"><span class="icon mdi mdi-youtube-play"></span><span id="footerText2">youtube</span></a></div>
+    <div class="col"><a class="social-inner" href="https:www.google.com"><span class="icon mdi mdi-youtube-play"></span><span id="footerText2">google</span></a></div>
+</div>
+</footer>
+  <!--End of Footer-->

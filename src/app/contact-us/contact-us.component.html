@@ -1,0 +1,62 @@
+
+<div class="contactBack">
+  <div class="caption">
+    <span class="border"> Contact Us </span><br>
+  </div>
+</div>
+<br><br>
+<!--  contact form-->
+<br>
+<div class="container" id="contactInfo">
+<div class="row">
+  <div class="col-6">
+    <div class="container" id="contactDetails">
+    <br>
+    <h4 id="heading1">Our Address:</h4>
+    <div class="container">
+      <p>1234/1 Abc Road<br>
+         Kolkata:700001<br>
+         West Bengal</p>
+      Call us at:<div class="container"><a href="tel:#"> (+91) 98765 43210 </a><br>or,<br><a href="tel:#">(+91) 98765 01234</a></div><br>
+      <p>Mail us at:<a href="mailto:#"> clicktoclick@abc.com</a></p>
+    </div>
+    </div>
+  </div>
+  <div class="col-6">
+    
+    <form class="text-center border border-light p-5" id="contactForm" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <br>
+    <h4>Contact us</h4>
+    
+    <!-- Name -->
+    <input type="text" formControlName="formName" id="FormName"  placeholder="Enter your Name">
+    <div *ngIf="contactForm.get('formName').hasError('required') && contactForm.get('formName').touched" id="error">* Name is required</div><br>
+
+    <!-- Email -->
+    <input type="email" formControlName="formEmail" id="FormEmail"  placeholder="Enter your E-mail">
+    <div *ngIf="contactForm.get('formEmail').hasError('required') && contactForm.get('formEmail').touched" id="error">* Email is required</div><br>
+    
+    <!-- Subject -->
+    <select formControlName="formSubjects" >
+        <option value="" disabled>Choose Subject</option>
+        <option value="1" selected>Feedback</option>
+        <option value="2">Report a bug</option>
+        <option value="3">Feature request</option>
+        <option value="4">Feature request</option>
+    </select>
+
+    <!-- Message -->
+    <div class="form-group">
+      <textarea formControlName="formMessage"   id="exampleFormControlTextarea2"
+      rows="3" placeholder="Type your Message"></textarea>
+    </div>
+
+    <!-- Send button -->
+      <button  color="info" outline="true" block="true"  type="submit" id="sendButton">Send</button>
+
+    </form>
+  <!--  form contact -->
+  </div>
+  
+</div>
+</div>

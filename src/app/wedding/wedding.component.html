@@ -1,0 +1,33 @@
+<div class="coverImage">
+  <div class="caption">
+    <span class="border"> Wedding Photographers </span><br>
+  </div>
+</div>
+<!--Profiles-->
+<div class="container" id="profile">
+  <p id="caption"><u>Profiles</u></p> 
+  <div class="container main ">
+  <br><br>
+    <div class="row one">
+      <ng-container *ngFor="let a of profile" >
+         <div class="col-sm-4 pic">
+             <img id="profileImg" src={{a.image}}>
+         </div>
+         <div class="col-sm-8 ">
+          	<div class="card text-center test1">
+              	<div class="card-body">
+               	   <h5 class="card-title">{{a.title}}</h5>
+                   <h6 class="card-subtitle mb-2 text-muted">Location: {{a.location}}</h6>
+                   <p class="card-text">"Lorem ipsum dolor sit amet"</p>
+                   <a routerLink="../profile/{{a.id}}" class="btn btn-primary detailButton">Visit Profile</a>
+                <!-- </div> -->
+                </div>
+             
+            </div><br>
+         </div>
+      </ng-container>
+     </div>
+      
+  <!-- </center> -->
+  </div>
+</div>
