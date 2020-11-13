@@ -140,3 +140,8 @@ input {
   height:1200px;
  
 }
+#back{
+  text-align: right;
+  color: #6008B8;
+  cursor:pointer;
+}

@@ -1,0 +1,21 @@
+.coverImage{
+	background-image : url("../../assets/img10.JPG");
+	height:550px;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cssButton
+{
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  border-radius: 12px;
+  background-color:#24248f;
+}
+.cssButton:hover
+{
+  background-image: linear-gradient(to right,#24248f, #3333cc , #c2c2f0);
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

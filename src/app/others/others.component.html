@@ -9,7 +9,7 @@
   <div class="container main ">
   <br><br>
     <div class="row one">
-      <ng-container *ngFor="let a of profile" >
+      <ng-container *ngFor="let a of profile| paginate: { itemsPerPage: count, currentPage: p }" >
          <div class="col-sm-4 pic">
              <img id="profileImg" src={{a.image}}>
          </div>
@@ -27,7 +27,9 @@
          </div>
       </ng-container>
      </div>
-      
-  <!-- </center> -->
+  <!--Including the pagination control.-->
+  <div class="text-right">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div> 
   </div>
 </div>

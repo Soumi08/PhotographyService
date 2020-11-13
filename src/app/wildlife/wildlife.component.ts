@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WildlifeComponent implements OnInit {
 
+// Pagination parameters.
+  p: Number = 1;
+  count: Number = 4;
+
 profile=[
 {
    id: "p046",

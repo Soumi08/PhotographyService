@@ -1,0 +1,27 @@
+<div class="coverImage">
+  
+</div>
+<div class="container">
+ <div class="page-wrapper bg-img p-t-100 p-b-100 font-robo">
+    <div class="wrapper wrapper--w800">
+      <div class="card ">
+        <div class="card-heading"></div>
+          <div class="card-body">
+            <div *ngFor="let a of dataValue">
+                 <h3 class="card-header "><i><u>My Profile</u></i></h3>
+                 <div class="card-body">
+                    <h5 class="card-title">Full Name:  {{a.full_name}}</h5><br>
+                    <p class="card-text">Email:   {{a.email}}</p>
+                    <p class="card-text">User Id:  <i> {{a.user_id}}</i></p>
+                    <div>
+                       <button type="button" value="Log Out" class="btn btn-primary cssButton" (click)="logout()">Log Out</button>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+   
+          

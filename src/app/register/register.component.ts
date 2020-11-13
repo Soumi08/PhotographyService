@@ -35,7 +35,7 @@ export class RegisterComponent implements OnInit {
        console.log(this.userResponse);
        alert(this.userResponse.message);
 
-        //this.router.navigate(['/login']);
+        this.router.navigate(['/login']);
     })
    
   }

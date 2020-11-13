@@ -1,40 +1,48 @@
-<div class="coverImage">
-  <div class="caption">
-    <span class="border"> Profile </span><br>
-  </div>
-</div>
-<!--Profiles-->
-<div class="container" id="profile">
-  <div class="container main ">
-  <br><br>
-    <div class="row one">
-      
-         <div class="col-sm-4 pic">
-             <img id="profileImg" src={{userData.image1}}>
-         </div>
-         <div class="col-sm-8 ">
-          	<div class="card text-center test1">
-              	<div class="card-body">
-               	   <h5 class="card-title">Name: {{userData.name}}</h5>
-                   <h6 class="card-subtitle mb-2 text-muted">Type of Photography: {{userData.type}}</h6>
-                   <p class="card-text">"Lorem ipsum dolor sit amet"</p>
-                   <!-- <a routerLink="../details/{{a.id}}" --> <a class="btn btn-primary detailButton">Book Now</a>
-                <!-- </div> -->
-                </div>
-               
-            </div><br>
-         </div>
-     
-     </div>
-     <div class="row two">
-      <div class="col-sm-6 pic">
-                	<img id="sampleImg" src={{userData.sample1}}>
-                </div>
-                <div class="col-sm-6 pic">
-                	<img id="sampleImg" src={{userData.sample2}}>
-                </div> 
-       </div><br>
-   
-  <!-- </center> -->
+
+<div class="profile-page">
+  <div class="page-header header-filter" data-parallax="true" style="background-image:url('../../assets/img4.JPG');"></div>
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto">
+            <div class="profile">
+              <div class="avatar">
+                <img src={{userData.image1}} alt="Circle Image" class="img-raised rounded-circle img-fluid">
+              </div>
+              <div class="name">
+                <h3 class="title">{{userData.name}}</h3>
+                <h6>Type of Photography: {{userData.type}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="description text-center">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        </div>
+        <div >
+        <br>                
+          <p id="title"><u>Sample Work</u></p>
+        </div> 
+        <div class="tab-content tab-space">
+          <div class="tab-pane active text-center gallery" id="studio">
+            <div class="row">
+              <div class="col-md-3 ml-auto">
+                <img src={{userData.sample1}} class="rounded">
+                <img src={{userData.sample2}} class="rounded">
+              </div>
+              <div class="col-md-3 mr-auto">
+                <img src={{userData.sample4}} class="rounded">
+                <img src={{userData.sample3}} class="rounded">
+              </div>
+            </div>
+            <div>                
+                <button class="btn btn-primary bookButton">Book now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

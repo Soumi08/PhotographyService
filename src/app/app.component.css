@@ -12,7 +12,29 @@
    color: white;
    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-/*for Login button(end)*/
+/* for Login button(end)*/
+.heading {
+  background: url("./../assets/img10.JPG") center center/cover no-repeat;
+  padding-top: 210px;
+  height:200px;
+
+}
+/*for sign up and registration*/
+.cssButton
+{
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  border-radius: 12px;
+  background-color:#24248f;
+}
+.cssButton:hover
+{
+  background-image: linear-gradient(to right,#24248f, #3333cc , #c2c2f0);
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/* for sign up and registration (end) */
 
 /*for modal (start)*/
 #form

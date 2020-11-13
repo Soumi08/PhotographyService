@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OthersComponent implements OnInit {
 
-
+// Pagination parameters.
+  p: Number = 1;
+  count: Number = 4;
+  
 profile=[
 {
    id: "p027",

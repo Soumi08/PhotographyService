@@ -43,7 +43,8 @@
      width: 90%;
      height:635px;
      /*background: inherit;*/
-     background-color: #b3cccc;
+     /*background-color: #b3cccc;*/
+     background-image: radial-gradient(#ffffff,#d1e0e0, #669999,#3d5c5c );
      padding: 1px;
      margin: auto;
      position: relative;

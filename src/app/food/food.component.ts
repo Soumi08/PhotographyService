@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food.component.css']
 })
 export class FoodComponent implements OnInit {
+
 // Pagination parameters.
   p: Number = 1;
   count: Number = 4;

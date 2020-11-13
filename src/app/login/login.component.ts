@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { FormGroup,FormControl,Validators } from '@angular/forms';
-import { ServiceProjectService } from './service-project.service'; 
-import { ServiceStorageService } from './service-storage.service';
+import { ServiceProjectService } from '../service-project.service'; 
+import { ServiceStorageService } from '../service-storage.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class AppComponent {
-  title = 'angularProject';
+export class LoginComponent implements OnInit {
+
   loginForm:FormGroup;
   loginDetails;
   userResponse;
@@ -35,12 +35,15 @@ export class AppComponent {
        this.userResponse=loginParam;
        console.log(this.userResponse);
        alert(this.userResponse.message);
-        
+
        this.storageService.setData(this.userResponse.email, this.userResponse.full_name, this.userResponse.token, this.userResponse.user_id);
 
-       this.router.navigate(['/all']);    
+       this.router.navigate(['/all']);
+    
+       
     })
+        
+       
   }
  
 }
-

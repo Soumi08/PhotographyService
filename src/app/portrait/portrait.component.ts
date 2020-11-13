@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortraitComponent implements OnInit {
 
+// Pagination parameters.
+  p: Number = 1;
+  count: Number = 4;
+  
 profile=[
 {
    id: "p029",
